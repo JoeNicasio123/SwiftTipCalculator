@@ -27,7 +27,40 @@ class ViewController: UIViewController {
         } else {
             tipAmount.text = "INVALID"
             totalBill.text = "INVALID"
-            billAmount.text = " "
+        }
+        tipAmount.sizeToFit()
+        totalBill.sizeToFit()
+    }
+    
+    @IBAction func eighteenPercent(_ sender: Any) {
+        if let bill = Double(billAmount.text!) {
+            
+            let tip = bill * 0.18
+            let total = tip + bill
+            
+            tipAmount.text = String(format:"$%.2f", tip)
+            totalBill.text = String(format: "$%.2f", total)
+            
+        } else {
+            tipAmount.text = "INVALID"
+            totalBill.text = "INVALID"
+        }
+        tipAmount.sizeToFit()
+        totalBill.sizeToFit()
+    }
+    
+    @IBAction func twentyPercent(_ sender: Any) {
+        if let bill = Double(billAmount.text!) {
+            
+            let tip = bill * 0.20
+            let total = tip + bill
+            
+            tipAmount.text = String(format:"$%.2f", tip)
+            totalBill.text = String(format: "$%.2f", total)
+            
+        } else {
+            tipAmount.text = "INVALID"
+            totalBill.text = "INVALID"
         }
         tipAmount.sizeToFit()
         totalBill.sizeToFit()
