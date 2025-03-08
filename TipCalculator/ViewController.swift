@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var totalBill: UILabel!
     
     @IBAction func fifteenPercent(_ sender: Any) {
-        if let billText = billAmount.text, let bill = Double(billText) {
+        if let bill = Double(billAmount.text!) {
             
             let tip = bill * 0.15
             let total = tip + bill
